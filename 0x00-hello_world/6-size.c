@@ -1,5 +1,10 @@
 #include<stdio.h>
 
+/**
+ * main -entry point
+ *
+ * Return Always Zero
+ */
 int main(void)
 {
 	int a;
