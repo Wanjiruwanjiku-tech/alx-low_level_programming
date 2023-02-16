@@ -1,9 +1,10 @@
 #include<stdio.h>
 
 /**
- * Main is the Entry point
+ * main - prints the phrase 'Programming is like building
+ * a multilingual puzzle'
  *
- * Return is zero by default
+ * Return : 0 if exited properly
  */
 int main(void)
 {

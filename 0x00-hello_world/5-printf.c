@@ -1,8 +1,8 @@
 #include<stdio.h>
 
 /**
- * Main is the Entry
- *
+ * main prints with proper grammar,but the outcome is
+ *a piece of art
  * return defaults zero
  */
 int main(void)
