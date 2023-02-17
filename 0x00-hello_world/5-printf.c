@@ -1,9 +1,9 @@
 #include<stdio.h>
 
 /**
- * main prints with proper grammar,but the outcome is
- *a piece of art
- * return defaults zero
+ * main - Entry point
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
