@@ -1,20 +1,19 @@
 #include<stdio.h>
 
 /**
- * main - Entry point
- * Description: Print lowercase alphabet
- * Return: 0
+ * main - Prints lowercase alphabets using the function
+ * putchar
+ *
+ * Return: Aleays 0
  */
 int main(void)
-}
-	char A ='a';
+{
+	 char letter;
 
-	while (A <= 'z')
-	{
-		putchar(A);
-		A++;
-	}
-	putchar('\n')
+	 for (letter = 'a'; letter <= 'z'; letter++)
+		 putchar(letter);
 
-	return (0);
+	 putchar('\n');
+
+	 return (0);
 }
