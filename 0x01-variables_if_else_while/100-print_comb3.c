@@ -8,20 +8,28 @@
  */
 int main(void)
 {
-	int a, b;
+	int a, b, c;
 
-	for (a = 0; a < 9; a++)
+	a = 0;
+
+	while (a < 100)
 	{
-		for (b = a + 1; a < 10; a++)
-		{
-			putchar((a % 10) + '0');
-			putchar((b % 10) + '0');
+		b = a % 10;
+		c = a / 10;
 
-			if (a == 8 && b == 9)
-				continue;
-			putchar(',');
-			putchar(' ');
+		if (c < b)
+		{
+			putchar(c + '0');
+			putchar(b + '0');
+
+			if (a < 89)
+			{
+				putchar(44);
+				putchar(32);
+			}
 		}
+
+		a++
 	}
 
 	putchar('\n');
