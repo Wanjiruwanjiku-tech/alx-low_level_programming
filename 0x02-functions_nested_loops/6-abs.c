@@ -2,10 +2,11 @@
 
 /**
 *_abs - computes the absolute value of an integer
+*@n: int type number
 *
 *Return: Always 0
 */
-int _abs(int c)
+int _abs(int n)
 {
 	if (n < 0)
 	{
