@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
 *add - A function that adds two values
 *
 *@n1: The first number to be entered
