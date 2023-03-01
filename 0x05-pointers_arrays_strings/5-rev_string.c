@@ -1,18 +1,17 @@
 #include "main.h"
 
 /**
-*rev_string - A function that takes a pointer to a
-*string and reverses it in place
-*@s: The pointer
-*
-*Return: void
-*/
+  * rev_string - Reverses a string
+  * @s: The string to be modified
+  *
+  * Return: void
+  */
 void rev_string(char *s)
 {
 	int i, c, k;
-	char *a, temp
+	char *a, aux;
 
-	*a = s;
+	a = s;
 
 	while (s[c] != '\0')
 	{
@@ -26,9 +25,9 @@ void rev_string(char *s)
 
 	for (i = 0; i < (c / 2); i++)
 	{
-		temp = s[i];
+		aux = s[i];
 		s[i] = *a;
-		*a = temp;
+		*a = aux;
 		a--;
 	}
 }
