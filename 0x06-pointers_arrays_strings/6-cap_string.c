@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
 *cap_string - A function that capitalizes all words of
@@ -10,24 +9,29 @@
 */
 char *cap_string(char *str)
 {
-	int a = 0, i;
-	int cspc = 13;
-	char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
+	int i = 0;
+	int capt = 1;
 
-	while (s[a])
+	while (str[i] != '\0')
 	{
-		i = 0;
-
-		while (i < cspc)
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+		str[i] == ',' || str[i] == ';' || str[i] == '.' ||
+		str[i] == '!' || str[i] == '?' || str[i] == '"' ||
+		str[i] == '(' || str[i] == ')' || str[i] == '{' ||
+		str[i] == '}')
 		{
-			if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
-			s[a] -= 32;
-
-			i++;
+			capt = 1;
 		}
-
-		a++;
+		else if (capt)
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+			{
+				str[i] = str[i] - 'a' + 'A';
+			}
+			capt = 0;
+		}
+		i++;
 	}
 
-	return (s);
+	return (str);
 }
