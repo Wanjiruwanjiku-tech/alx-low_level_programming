@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 *leet - A function that encodes a string into 1337
@@ -43,4 +44,3 @@ char *leet(char *str)
 	}
 	return (ptr);
 }
-
