@@ -10,19 +10,24 @@
 */
 char *cap_string(char *str)
 {
-	int i = 0;
+	int a = 0, i;
+	int cspc = 13;
+	char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
 
-	while (str[i])
+	while (s[a])
 	{
-		if (i == 0 || is_word_separator(str[i - 1]))
+		i = 0;
+
+		while (i < cspc)
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] = str[i] - 'a' + 'A';
-			}
+			if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
+			s[a] -= 32;
+
+			i++;
 		}
 
-		i++;
+		a++;
 	}
-	return (str);
+
+	return (s);
 }

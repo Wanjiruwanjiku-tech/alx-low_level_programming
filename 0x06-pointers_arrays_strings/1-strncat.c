@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
 *_strncat - A Function that concatanates two stings
@@ -14,13 +13,12 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	char *result = dest;
+	int i = 0;
 
 	while (*dest != '\0')
 	{
 		dest++;
 	}
-
-	int i = 0;
 
 	while (*src != '\0' && i < n)
 	{

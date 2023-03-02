@@ -11,14 +11,14 @@
 */
 char *_strcat(char *dest, char *src)
 {
-	char *result = dest /*initialize result to same value as dest */
+	char *result = dest; /*initialize result to same value as dest */
 
 	while (*dest != '\0')
 	{
 		dest++; /*increment dest untill null*/
 	}
 
-	while (src != '\0')
+	while (*src != '\0')
 	{
 		*dest = *src;
 		dest++;
