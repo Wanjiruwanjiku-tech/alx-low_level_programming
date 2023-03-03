@@ -10,37 +10,21 @@
 */
 char *leet(char *str)
 {
-	char *ptr = str;
+	int i, j;
+	char leet_letters[] = {'4', '3', '0', '7', '1'};
+	char normal_letters[] = {'a', 'e', 'o', 't', 'l'};
 
-	while (*ptr)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		ptr++;
+		for (j = 0; j < 5; j++)
+		{
+			if (str[i] == normal_letters[j] || str[i] == normal_letters[j] - 'a' + 'A')
+			{
+				str[i] = leet_letters[j];
+				break;
+			}
+		}
 	}
-	ptr--;
 
-	while (str <= ptr)
-	{
-		if (*str == 'a' || *str == 'A')
-		{
-			*str = '4';
-		}
-		else if (*str == 'e' || *str == 'E')
-		{
-			*str = '3';
-		}
-		else if (*str == 'o' || *str == 'O')
-		{
-			*str = '0';
-		}
-		else if (*str == 't' || *str == 'T')
-		{
-			*str = '7';
-		}
-		else if (*str == 'l' || *str == 'L')
-		{
-			*str = '1';
-		}
-		str++;
-	}
-	return (ptr);
+	return (str);
 }
