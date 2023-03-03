@@ -21,7 +21,7 @@ void print_number(int n)
 	while (n / i > 9)
 	{
 		i *= 10;
-	} /** Find the largest power if 10*/
+	} /** Find the largest power of 10*/
 
 	while (i > 0)
 	{

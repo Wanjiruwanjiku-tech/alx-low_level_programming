@@ -13,6 +13,12 @@ char *rot13(char *str)
 
 	while (*ptr)
 	{
+		ptr++;
+	}
+	ptr--;
+
+	while (str <= ptr)
+	{
 		if ((*str >= 'a' && *str <= 'm') || (*str >= 'A' && *str <= 'M'))
 		{
 			*str += 13;
@@ -21,7 +27,7 @@ char *rot13(char *str)
 		{
 			*str -= 13;
 		}
-		
+
 		str++;
 	}
 
