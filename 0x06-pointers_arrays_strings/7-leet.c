@@ -11,16 +11,19 @@
 char *leet(char *str)
 {
 	int i, j;
-	char leet_letters[] = {'4', '3', '0', '7', '1'};
-	char normal_letters[] = {'a', 'e', 'o', 't', 'l'};
+	char leetlet[] = "AaEeOoTtLl";
+	char lettnum[] = "4433007711";
+	int n;
+
+	n = strlen(leetlet);
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < n; j++)
 		{
-			if (str[i] == normal_letters[j] || str[i] == normal_letters[j] - 'a' + 'A')
+			if (str[i] == leetlet[j])
 			{
-				str[i] = leet_letters[j];
+				str[i] = leetnum[j];
 				break;
 			}
 		}
