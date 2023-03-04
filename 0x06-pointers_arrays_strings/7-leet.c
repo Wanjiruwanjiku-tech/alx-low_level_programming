@@ -12,22 +12,22 @@
 */
 char *leet(char *str)
 {
-	int i, j;
 	char leetlet[] = "AaEeOoTtLl";
 	char leetnum[] = "4433007711";
-	int n;
+	int i;
 
-	n = strlen(leetlet);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; j < n; j++)
+		char *pos = strchr(leetlet, str[i]);
+
+		if (pos != NULL)
 		{
-			if (str[i] == leetlet[j])
-			{
-				str[i] = leetnum[j];
-				break;
-			}
+			str[i] = leetnum[pos - leetlet];
 		}
 	}
 
