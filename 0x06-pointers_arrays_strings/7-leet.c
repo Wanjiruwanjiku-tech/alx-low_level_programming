@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+#include <unistd.h>
 #include <stdio.h>
 
 /**
@@ -12,7 +14,7 @@ char *leet(char *str)
 {
 	int i, j;
 	char leetlet[] = "AaEeOoTtLl";
-	char lettnum[] = "4433007711";
+	char leetnum[] = "4433007711";
 	int n;
 
 	n = strlen(leetlet);
