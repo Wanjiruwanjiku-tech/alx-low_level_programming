@@ -10,14 +10,5 @@
 */
 void set_string(char **s, char *to)
 {
-	char *new_str = malloc(strlen(to) + 1);
-	/* Allocate mem fo new pointer var to 'to'*/
-
-	if (new_str == NULL)
-	{
-		printf("Error: could not allocate memory");
-		printf("\n");
-	}
-	strcpy(new_str, to);
-	*s = new_str;
+	*s = to;
 }
