@@ -1,2 +1,2 @@
-Learning the C programming language.
+learning the C programming language.
 Basics
