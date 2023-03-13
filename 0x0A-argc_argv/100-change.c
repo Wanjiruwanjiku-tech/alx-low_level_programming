@@ -12,32 +12,37 @@
 */
 int main(int argc, char *argv[])
 {
-	int cents = atoi(argv[1]);
-	int a, b, c, d, e;
-	int total = a + b + c + d + e;
+	int num_coins = 0;
+	int cents;
 
-	a = cents / 25;
-	cents %= 25;
-	b = cents / 10;
-	cents %= 10;
-	c = cents / 5;
-	cents %= 5;
-	d = cents / 2;
-	cents %= 2;
-	e = cents;
-	if (argc != 2) /* if one argument is passed*/
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
-	}
-	if (cents < 0) /* if negative */
+	} /* To check if not more than one argument has been passed*/
+
+	cents = atoi(argv[1]);
+
+	if (cents < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	else
-	{
-		printf("%d\n", total);
-	}
+	num_coins += cents / 25; /*quarters*/
+	cents %= 25;
+
+	num_coins += cents / 10; /*dimes*/
+	cents %= 10;
+
+	num_coins += cents / 5; /*nickles*/
+	cents %= 5;
+
+	num_coins += cents / 2; /*twos*/
+	cents %= 2;
+
+	num_coins += cents; /*ones*/
+
+	printf("%d\n", num_coins);
+
 	return (0);
 }
