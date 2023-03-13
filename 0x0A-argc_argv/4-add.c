@@ -13,15 +13,16 @@ int main(int argc, char *argv[])
 {
 	int i = 0; /*counter*/
 	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[27]);
+	int num2 = atoi(argv[2]);
 	int sum = num1 + num2;
 
-	if (*argv[i] == '\0')
+	if (argc < 3)
 	{
 		printf("0\n");
 	}
-	else if (argc != 48 && argc != 57)
+	else if (num1 <= 0 && num2 <= 0)
 	{
+		printf(Error);
 		return (1);
 	}
 	else
