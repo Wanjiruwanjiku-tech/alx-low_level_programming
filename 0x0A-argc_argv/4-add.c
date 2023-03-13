@@ -11,23 +11,27 @@
 */
 int main(int argc, char *argv[])
 {
-	int i = 0; /*counter*/
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[2]);
-	int sum = num1 + num2;
+	int c, d;
+	int n = 0;
 
-	if (argc < 3)
+	if (argc < 2)
 	{
 		printf("0\n");
+		return (0);
 	}
-	else if (num1 <= 0 && num2 <= 0)
+	for (c = 1; c < argc; c++)
 	{
-		printf(Error);
-		return (1);
+		for (d = 0; argv[c][d] != '\0'; d++)
+		{
+			if (argv[c][d] < '0' || argv[c][d] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		n += atoi(argv[c]);
+
 	}
-	else
-	{
-		printf("%d\n", sum);
-	}
+	printf("%d\n", n);
 	return (0);
 }
