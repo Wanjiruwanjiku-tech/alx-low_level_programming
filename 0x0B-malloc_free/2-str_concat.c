@@ -8,25 +8,28 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	char *cat_str;
-	size_t len1 = strlen(s1);
-	size_t len2 = strlen(s2);
-	size_t total_len = len1 + len2 + 1;
+	char *concat_str;
+	int index, concat_index = 0, len = 0;
 
-	if (s1 == NULL || s2 == NULL) /*Handle null inputs*/
-	{
+	if (s1 == NULL)
 		s1 = "";
+
+	if (s2 == NULL)
 		s2 = "";
-	}
-	cat_str = malloc(sizeof(char) * total_len);
 
-	if (cat_str == NULL)
-	{
-		return (NULL); /*Check if malloc is successful*/
-	}
-	memcpy(cat_str, s1, len1);
-	memcpy(cat_str + len1, s2, len2 + 1);
-	free(cat_str);
+	for (index = 0; s1[index] || s2[index]; index++)
+		len++;
 
-	return (cat_str);
+	concat_str = malloc(sizeof(char) * len);
+
+	if (concat_str == NULL)
+		return (NULL);
+
+	for (index = 0; s1[index]; index++)
+		concat_str[concat_index++] = s1[index];
+
+	for (index = 0; s2[index]; index++)
+		concat_str[concat_index++] = s2[index];
+
+	return (concat_str);
 }
