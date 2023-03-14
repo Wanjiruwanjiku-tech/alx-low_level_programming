@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	memcpy(cat_str, s1, len1);
 	memcpy(cat_str + len1, s2, len2 + 1);
+	free(cat_str);
 
 	return (cat_str);
-	free(cat_str);
 }
