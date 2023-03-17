@@ -2,21 +2,17 @@
 #include <stdlib.h>
 
 /**
-*malloc_checked - A Function that dynamically allocates
-*memory using malloc function
-*@b: The size to assign
-*
-*Return: A Pointer to allocated memory or a status
-*value of 98 if failure
-*
-*/
+ * malloc_checked - Allocates memory using malloc.
+ * @b: The number of bytes to be allocated.
+ *
+ * Return: A pointer to the allocated memory.
+ */
 void *malloc_checked(unsigned int b)
 {
-	void *pointer = malloc(b);
+	void *mem = malloc(b);
 
-	if (pointer == NULL)
-	{
+	if (mem == NULL)
 		exit(98);
-	}
-	return (pointer);
+
+	return (mem);
 }
