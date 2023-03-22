@@ -10,9 +10,11 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
+	int *ptr = array; /*init pointer to start of array*/
 
 	for (i = 0; i < size; i++) /*The loop increments to each element*/
 	{
-		(*action)(array[i]); /*Call the function to execute on each element*/
+		action(*ptr); /*Call the function to execute on each element*/
+		ptr++;
 	}
 }
