@@ -15,24 +15,22 @@
 */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i; /*loop counter*/
-	va_list ap; /*varaible list variable*/
+	void print_numbers(const char *separator, const unsigned int n, ...)
+{
+	va_list nums;
+	unsigned int index;
 
-	va_start(ap, n);
+	va_start(nums, n);
 
-	/*iterate through n to print the numbers*/
-	for (i = 0; i < n; i++)
+	for (index = 0; index < n; index++)
 	{
-		printf("%d\n", va_arg(ap, int));
+		printf("%d", va_arg(nums, int));
 
-		/*check if separator is null*/
-		if (separator == NULL)
-		{
-			return;
-		}
-		else if (i != (n - 1) && separator != NULL)
-		{
-			printf("%s\n", separator);
-		}
+		if (index != (n - 1) && separator != NULL)
+			printf("%s", separator);
 	}
+
+	printf("\n");
+
+	va_end(nums);
 }
