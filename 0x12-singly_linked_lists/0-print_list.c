@@ -13,7 +13,7 @@ size_t print_list(const list_t *h)
 {
 	size_t count = 0;/*increments and returns the total of nodes*/
 
-	while (h->str == NULL)
+	while (h)
 	{
 		/*loop through the list till we reach null*/
 		if (h->str == NULL)
