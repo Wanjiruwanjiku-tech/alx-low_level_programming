@@ -12,7 +12,7 @@ size_t print_listint(const listint_t *h)
 {
 	size_t count = 0; /*To Return total num of nodes*/
 
-	while (h != NULL)
+	while (h)
 	{
 		printf("The number if Nodes is : %d\n", h->n);
 		h = h->next;
