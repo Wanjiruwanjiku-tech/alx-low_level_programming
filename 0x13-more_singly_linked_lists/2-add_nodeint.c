@@ -15,10 +15,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	/*Allocate memory for new node.*/
 	new_node1 = malloc(sizeof(listint_t));
-
 	if (new_node1 == NULL)
 	{
-		free(new_node1);
 		return (NULL);
 	}
 	/*Set the data field*/
