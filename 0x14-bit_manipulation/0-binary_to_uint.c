@@ -30,18 +30,3 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (result);
 }
-	while (i >= 0)
-	{
-		if (b[i] == '0')
-		{
-			i--;
-			power++;
-		}
-		else if (b[i] == '1')
-		{
-			n = n + (1 << power);
-		}
-		else
-			return (0);
-	}
-	return (n);
