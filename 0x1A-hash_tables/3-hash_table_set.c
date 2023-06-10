@@ -6,7 +6,6 @@
 *@ht: pointer to the hash table
 *@key: Pointer to the key
 *@value: The value to add
-*
 *Return: 1 if it succeeded, 0 otherwise
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -16,9 +15,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/*Check if ht and key are empty*/
 	if (ht == NULL || key == NULL || *key == '\0')
-	{
 		return (0);
-	}
+
 	index = key_index((unsigned char *)key, ht->size);
 	current = ht->array[index];
 
@@ -34,9 +32,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
-	{
 		return (0);
-	}
+
 	new_node->key = strdup(key);
 	if (new_node->key == NULL)
 	{
@@ -52,6 +49,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
-
-	return(1);
+	return (1);
 }
