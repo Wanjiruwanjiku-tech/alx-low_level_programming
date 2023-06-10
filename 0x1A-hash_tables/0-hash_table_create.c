@@ -5,7 +5,7 @@
 *hash map
 *@size: The size of the array
 *
-*Returns: A pointer to the newly created hash table
+*Return: A pointer to the newly created hash table
 *	- If something went wrong, your function
 *	  should return NULL
 */
