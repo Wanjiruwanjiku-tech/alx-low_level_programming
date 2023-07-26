@@ -1,0 +1,8 @@
+CC=gcc #The Compiler
+SRC=main.c school.c #The Source Files
+# The Object files
+OBJ=${SRC: .c=.o} #Replace all .c in SRC with resp .o
+NAME=school #The Executable
+
+all : ${OBJ}
+	${CC} -o ${NAME} ${OBJ}

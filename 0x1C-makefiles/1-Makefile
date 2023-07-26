@@ -1,0 +1,5 @@
+CC=gcc #Variable to store compiler
+SRC=main.c school.c #Source files
+
+all  : ${SRC}
+	${CC} -o school ${SRC}

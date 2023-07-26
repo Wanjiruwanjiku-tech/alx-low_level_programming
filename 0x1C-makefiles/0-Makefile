@@ -1,0 +1,4 @@
+#Build an executable
+
+all : main.c school.c
+	gcc -o school main.c school.c
