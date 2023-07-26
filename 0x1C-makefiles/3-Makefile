@@ -1,8 +1,9 @@
-CC=gcc #The Compiler
-SRC=main.c school.c #Source files
-OBJ=${SRC: .c=.o}
+CC=gcc
+SRC=main.c school.c 
+OBJ=${SRC:.c=.o}
 NAME=school
-RM=rm -f #Program to delete files
+#Program to delete files
+RM=rm -f
 
 all : ${OBJ}
 	${CC} -o ${NAME} ${OBJ}

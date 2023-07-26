@@ -1,8 +1,11 @@
-CC=gcc #The Compiler
-SRC=main.c school.c #The Source Files
-# The Object files
-OBJ=${SRC:.c=.o} #Replace all .c in SRC with resp .o
-NAME=school #The Executable
+CC = gcc
 
-all : ${OBJ}
-	${CC} -o ${NAME} ${OBJ}
+SRC = main.c school.c 
+
+#Replace all .c in SRC with resp .o
+OBJ = $(SRC:.c=.o)
+
+NAME = school
+
+all: $(OBJ)
+	$(CC) -o $(NAME) $(OBJ)
