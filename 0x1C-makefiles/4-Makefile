@@ -1,0 +1,35 @@
+#The compiler
+CC = gcc
+
+#The Soutce Files
+SRC = main.c school.c
+
+#Object files derived from src
+OBJ = ${SRC:.c=.o}
+
+#The Executable file's name
+NAME = school
+
+#The program to delete files
+RM = rm -f
+
+#Flags for the compiler
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all : $(OBJ)
+	${CC} ${CFLAGS} -o ${NAME} ${OBJ}
+
+#Deletes all files including the executable
+clean:
+	${RM} *~ ${NAME}
+
+
+#Deletes the object files
+oclean:
+	${RM} $(OBJ)
+
+#Deletes both object files and executables
+fclean: clean oclean
+
+#Forces recompilation of all src fes
+re: oclean all

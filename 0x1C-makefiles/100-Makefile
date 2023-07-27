@@ -1,0 +1,37 @@
+#The compiler
+CC =gcc
+
+#The source files
+SRC = main.c school.c
+
+#The object files derived from src
+OBJ = ${SRC:.c=.o}
+
+#The Executable file
+NAME = school
+
+#Flags for the compiler
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+#The target lists all the rules that are not
+#file targets, so Make won't confuse them 
+#with actual files.
+.PHONY: all clean oclean fclean re
+
+#Create Executable and ensure m.h is present
+all: m.h ${OBJ}
+	${CC} ${CFLAGS} -o ${NAME} ${OBJ}
+
+#Implement clean rule(deletes vim files as well as x)
+clean:
+	$(RM) *~ ${NAME}
+
+#Implement oclean(deletes object files)
+oclean:
+	$(RM) ${OBJ}
+
+#Implement fclean (deleted both x and .o)
+fclean: clean oclean
+
+#Force recompilation of src files
+re: oclean all
