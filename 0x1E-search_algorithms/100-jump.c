@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linear_search - Helper function to search for a value within the block
+ * linear_search_block - Helper function to search for a value within the block
  * @array: pointer to the first element in the array
  * @start: the starting index of the block
  * @end: the ending index of the block
